@@ -1,12 +1,13 @@
-multNoShare : multNoShare.c multNoShare.h
-	cp multNoShare.c multNoShare.cu
+multNoShare : 
 	nvcc -o multNoShare multNoShare.cu
-	rm multNoShare.cu
 
 
-multShare : multShare.c multShare.h
-	cp multShare.c multShare.cu
+
+multShare : 
 	nvcc -o multShare multShare.cu
-	rm multShare.cu
+
 
 all : multShare multNoShare
+
+clean:
+	rm multShare multNoShare
