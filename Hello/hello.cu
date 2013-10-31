@@ -29,8 +29,8 @@ int main()
   cudaMemcpy( ad, a, csize, cudaMemcpyHostToDevice ); 
   cudaMemcpy( bd, b, isize, cudaMemcpyHostToDevice ); 
   
-  dim3 dimGrid( 51, 175 );
-  dim3 dimBlock( 51, 1 );
+  dim3 dimGrid( 25, 25 );
+  dim3 dimBlock( 10, 10 );
   hello<<<dimGrid, dimBlock>>>(ad, bd);
   cudaMemcpy( a, ad, csize, cudaMemcpyDeviceToHost ); 
   cudaFree( ad );

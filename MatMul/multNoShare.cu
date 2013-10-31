@@ -72,15 +72,35 @@ __global__ void MatMulKernel(Matrix A, Matrix B, Matrix C) {
 int main(int argc, char* argv[]){
 
   // TODO - declare three matracies
+	Matrix A, B, C;
+	int a1, a2, b1, b2;
 
-  // TODO - take inputs from command line
+// TODO - take inputs from command line
+  a1 = atoi(argv[1]);                   /* Height of A */
+  a2 = atoi(argv[2]);                   /* Width  of A */
+  b1 = a2;                              /* Height of B */
+  b2 = atoi(argv[3]);                   /* Width  of B */
+
+  // printf("%i", a1);
+
 
   // TODO - Set A heigh width, declare elements
+  A.height = a1;
+  A.width = a2;
+  A.elements = (float*)malloc(A.width * A.height * sizeof(float))\
+;
 
   // TODO - Set B heigh width, declare elements
+B.height = b1;
+  B.width = b2;
+  B.elements = (float*)malloc(B.width * B.height * sizeof(float))\
+;
 
   // TODO - Set C heigh width, declare elements
-
+  C.height = A.height;
+  C.width = B.width;
+  C.elements = (float*)malloc(C.width * C.height * sizeof(float))\
+;
   // TODO - generate some random numbers
   
   // TODO - launch our wrapper program
