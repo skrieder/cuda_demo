@@ -1,4 +1,4 @@
 cuda_demo
 =========
 
-A CUDA demo for Matrix Multiply.
+A CUDA demo for various sample applications.
